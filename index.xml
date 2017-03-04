@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bits</title>
+    <link>https://ivylee.github.io/index.xml</link>
+    <description>Recent content on Bits</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/ivylee&#34;&gt;Ivy Lee&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Sat, 04 Mar 2017 16:15:05 -0500</lastBuildDate>
+    <atom:link href="https://ivylee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>a minimal training plot server</title>
+      <link>https://ivylee.github.io/post/a-minimal-training-plot-server/</link>
+      <pubDate>Sat, 04 Mar 2017 16:15:05 -0500</pubDate>
+      
+      <guid>https://ivylee.github.io/post/a-minimal-training-plot-server/</guid>
+      <description>&lt;p&gt;Training a deep convolutional neural network (CNN) can be a lengthy process.
+We usually want to monitor training loss and accuracy and validation loss and accuracy by plotting how these metrics
+change as the number of minibatches grows on a graph.
+&lt;a href=&#34;https://www.tensorflow.org&#34;&gt;Tensorflow&lt;/a&gt; provides &lt;a href=&#34;https://www.tensorflow.org/get_started/summaries_and_tensorboard&#34;&gt;Tensorboard&lt;/a&gt; for visualizing training progress.
+Recently I have been playing with &lt;a href=&#34;http://pytorch.org&#34;&gt;PyTorch&lt;/a&gt;, I really like its expresiveness and flexibility.
+Here&amp;rsquo;s a strategy for visualizing training progress with
+any learning framework that doesn&amp;rsquo;t provide Tensorboard-equivalent feature out of the box using Python 3.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;First of all as a good practice we output relevant metrics into a log file, the log file should be structured in a way
+that is easy to parse and extract metrics. We will need to write a parser method, and a plot method to generate desired
+graph(s). &lt;a href=&#34;http://matplotlib.org&#34;&gt;matplotlib&lt;/a&gt;, &lt;a href=&#34;http://seaborn.pydata.org&#34;&gt;seaborn&lt;/a&gt;, &lt;a href=&#34;http://ggplot.yhathq.com&#34;&gt;ggplot&lt;/a&gt; or &lt;a href=&#34;http://bokeh.pydata.org/en/latest&#34;&gt;bokeh&lt;/a&gt; are useful python libraries for graphing.&lt;/p&gt;
+
+&lt;p&gt;Then we can use &lt;a href=&#34;https://docs.python.org/3/library/asyncio.html&#34;&gt;asyncio&lt;/a&gt; to create a background job to plot the metrics we want to visualize and use &lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable&#34;&gt;aiohttp&lt;/a&gt; to create
+a web server that displays and refreshes the graph(s) at a certain interval.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Using python 3.4
+import asyncio
+import argparse
+from aiohttp import web
+
+
+GRAPH_LOCATION = &amp;quot;static/train_plot.png&amp;quot;
+
+
+def parser(log_file):
+    # read log_file and extract metrics such as
+    # minibatch number, training loss, training accuracy,
+    # validation loss, validation accuracy
+    return metrics
+
+
+def plot(metrics, output=GRAPH_LOCATION):
+    # save output image to GRAPH_LOCATION
+
+
+def plot_loop(args, loop):
+    print(&amp;quot;Updating plot&amp;quot;)
+    metrics = parser(args.log_file)
+    plot(metrics)
+    loop.call_later(args.interval, plot_loop, args, loop)
+
+
+@asyncio.coroutine
+def handler(request):
+    interval = int(request.GET.get(&#39;interval&#39;, 30))
+    resp = web.StreamResponse(status=200,
+                              reason=&#39;OK&#39;,
+                              headers={&#39;Content-Type&#39;: &#39;text/html&#39;})
+
+    yield from resp.prepare(request)
+
+    html_str = &amp;quot;&amp;quot;&amp;quot;
+        &amp;lt;html&amp;gt;
+            &amp;lt;head&amp;gt;
+                &amp;lt;meta http-equiv=&#39;refresh&#39; content=&#39;{}&#39;&amp;gt;
+            &amp;lt;/head&amp;gt;
+            &amp;lt;body&amp;gt;
+                &amp;lt;img src=&#39;{}&#39; width=&#39;100%&#39;/&amp;gt;
+            &amp;lt;/body&amp;gt;
+        &amp;lt;/html&amp;gt;
+    &amp;quot;&amp;quot;&amp;quot;.format(interval, GRAPH_LOCATION)
+    resp.write(str.encode(html_str))
+
+    yield from resp.drain()
+    return resp
+
+
+@asyncio.coroutine
+def build_server(loop, address, port):
+    app = web.Application(loop=loop)
+    app.router.add_route(&#39;GET&#39;, &amp;quot;/plot&amp;quot;, handler)
+    app.router.add_static(&#39;/static&#39;, &amp;quot;static&amp;quot;)
+    ret = yield from loop.create_server(app.make_handler(), address, port)
+    return ret
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    parser = argparse.ArgumentParser(description=&#39;Training graphs server&#39;)
+    parser.add_argument(&#39;log_file&#39;,
+                        help=&#39;path to train log file&#39;)
+    parser.add_argument(&#39;--interval&#39;, &#39;-i&#39;, default=30,
+                        help=&#39;plot interval&#39;)
+    parser.add_argument(&#39;--port&#39;, &#39;-p&#39;, default=7777,
+                        help=&#39;server port&#39;)
+    args = parser.parse_args()
+
+    loop = asyncio.get_event_loop()
+    loop.call_soon(plot_loop, args, loop)
+    loop.run_until_complete(build_server(loop, &#39;0.0.0.0&#39;, args.port))
+    try:
+        loop.run_forever()
+    except KeyboardInterrupt:
+        print(&amp;quot;Server shutting down!&amp;quot;)
+        loop.close()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This snippet can also be found &lt;a href=&#34;https://gist.github.com/ivylee/f1b00ce54f948e627605598ccf3cf4b9&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
