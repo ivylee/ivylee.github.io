@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Tircd--tweet From Irssi! - Bits" property="og:title">
+<title>Tircd--tweet From Irssi! | Bits</title>
+<link rel="stylesheet" href="https://ivylee.github.io/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ivylee.github.io"><h1 class="title is-4">Bits</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://ivylee.github.io/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">February 22, 2010</h2>
+    <h1 class="title">Tircd--tweet From Irssi!</h1>
+    
+    <div class="content">
+      <p>actually, it’s nothing new, for anyone outside china.</p>
+
+<p>i found this <a href="http://code.google.com/p/tircd/" title="tircd">tircd</a> several
+months ago when googling for command line twitter clients. there are
+many apps out there, but all without the feature of api proxy, which is
+a fatal defect for chinese users since…well, the GFW. so i gave up on
+looking for clients that support api proxy, instead, i tried global
+proxy.</p>
+
+<p>here i recommend <a href="http://paperb.us/" title="Paperbus">Paperbus</a> , the forever
+free proxy service, which profits from occasinally popped-up sponsor
+ads. though it had been blocked by GFW, the team got it back to work in
+reasonable time. keep fighting with GFW!</p>
+
+<p>setting global proxy is rather simple, using Paperbus for example:</p>
+
+<p>open ~/.bashrc with your favourite editor, add</p>
+
+<blockquote>
+<p>export http_proxy=<a href="http://127.0.0.1:3998">http://127.0.0.1:3998</a></p>
+</blockquote>
+
+<p>save, logout and then login.</p>
+
+<p>pay attention to those perl modules tircd depends on when installing. in
+my case i feel blessed that it’s in the aur. oh i love arch…</p>
+
+<p>after installation,</p>
+
+<blockquote>
+<p>cp /etc/tircd.cfg ~/.tircd</p>
+</blockquote>
+
+<p>now .tircd contains the config of tircd, modify if needed.</p>
+
+<blockquote>
+<p>tircd</p>
+</blockquote>
+
+<p>starts the server. then in irssi,</p>
+
+<blockquote>
+<p>/server localhost PORT TWITTER_PASSWORD TWITTER_ACCOUNT</p>
+</blockquote>
+
+<p>wait for the welcome message,</p>
+
+<blockquote>
+<p>/join #twitter</p>
+</blockquote>
+
+<p>wait for a little longer then you can start tweeting :) your followings
+will be users in the channel and your latest tweet will be the topic.
+it’s perfect for those who love chatting on IRC.</p>
+
+<p>ps: oauth support for tircd can be found
+<a href="http://code.google.com/p/tircd/issues/detail?id=72" title="oauth support tircd">here</a>
+.</p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/ivylee">Ivy Lee</a> 2017</p>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

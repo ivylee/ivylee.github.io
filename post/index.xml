@@ -117,5 +117,552 @@ if __name__ == &amp;quot;__main__&amp;quot;:
 &lt;p&gt;This snippet can also be found &lt;a href=&#34;https://gist.github.com/ivylee/f1b00ce54f948e627605598ccf3cf4b9&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>in guangzhou</title>
+      <link>https://ivylee.github.io/post/in-guangzhou/</link>
+      <pubDate>Wed, 23 Sep 2015 04:38:16 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/in-guangzhou/</guid>
+      <description>&lt;p&gt;So I&amp;rsquo;m back after spending the last 3 years in the US.&lt;/p&gt;
+
+&lt;p&gt;Still a bit jet-lagged, I went for my visa interview today and finished within half an hour,
+while watching lines of people slowly moving, occasionally one or two arguing with the assistants.
+There&amp;rsquo;s so much heat, it makes the people short-tempered.&lt;/p&gt;
+
+&lt;p&gt;I took the subway home as I vaguely remember how to get there from this station.
+To make sure I studied the map, and found a few more new lines but the way home didn&amp;rsquo;t change.
+One stop before the transfer I decided to go out and walk back along the river.
+There it is, a new tram! A cute little tram that travels only within a short distance.
+Walking on, I discovered plenty of seniors and kids with nannies enjoying their day,
+and an open-air ballroom under the bridge where the dancing and the music happen.
+It&amp;rsquo;s definitely much more crowded and full of life compared to when I first moved in to this neighborhood,
+about 10 years ago.&lt;/p&gt;
+
+&lt;p&gt;More than anything else, I miss the food here.
+I tried rice noodles with Shantou beef balls in a neighborhood restaurant yesterday with my mother,
+it was awesome. I also made sure to eat curry fish balls from 7-11 that I couldn&amp;rsquo;t find in any 7-11 in the US.
+The old and trusted restaurants are still around, with plenty of new and upcoming competitors.
+But the prices seem to be 20% higher than before.&lt;/p&gt;
+
+&lt;p&gt;Banking and mobile services are disappointing, for anyone spoiled by the efficiency of the US.
+I spent more than 2 hours in the bank to do something that need not to be done ever in the US.
+I visited 3 stores just to find out the prepaid plans I saw online are not available in store,
+because of lower margin.&lt;/p&gt;
+
+&lt;p&gt;(To be continued&amp;hellip;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ghost easy upgrade</title>
+      <link>https://ivylee.github.io/post/ghost-easy-upgrade/</link>
+      <pubDate>Wed, 29 Jul 2015 02:54:24 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/ghost-easy-upgrade/</guid>
+      <description>&lt;p&gt;Ghost is a really nice blogging solution. I haven&amp;rsquo;t updated my blog for such a long time and I am surprised to find out how easy the upgrade process is!&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;download the latest Ghost zip bundle&lt;/li&gt;
+&lt;li&gt;unzip&lt;/li&gt;
+&lt;li&gt;cd into the unzipped directory&lt;/li&gt;
+&lt;li&gt;rm -rf content&lt;/li&gt;
+&lt;li&gt;copy config.js and content from previous version Ghost directory to here&lt;/li&gt;
+&lt;li&gt;npm install &amp;ndash;production&lt;/li&gt;
+&lt;li&gt;npm start :)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let&amp;rsquo;s hope buster still works&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>lessons learned about jalapeño</title>
+      <link>https://ivylee.github.io/post/lessons-learned-about-jalapeno/</link>
+      <pubDate>Thu, 03 Jul 2014 18:55:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/lessons-learned-about-jalapeno/</guid>
+      <description>&lt;p&gt;It is hot.
+Cut it using a fork, instead of fixing it with your fingers.&lt;/p&gt;
+
+&lt;p&gt;We were cooking vegetables with tofu yesterday. As usual Julio likes to add a Jalapeño into the mix. I cut it the way I cut other vegetables, using my fingers to fix it while cutting it with a knife. About 5 minutes later, I started to feel very hot in my nails. I went to the bathroom to wash my hands with soap, and accidentally touched my nostrils with my fingers. I felt it burning in my nose! And my nails! Soap doesn&amp;rsquo;t help!&lt;/p&gt;
+
+&lt;p&gt;The hot sensation lasted until this morning. I also accidentally touched my eyes with my fingers, HOT!&lt;/p&gt;
+
+&lt;p&gt;I am facinated by the power of the chemical substance in the Jalapeño pepper, and the fact that finger nails, nostrils, eyes can react the same way to that substance by generating the HOT sensation, just as the tongue!&lt;/p&gt;
+
+&lt;p&gt;I will remember Julio said that his mother cuts it with a fork, no touching with fingers!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>after a long hiatus</title>
+      <link>https://ivylee.github.io/post/after-a-long-hiatus/</link>
+      <pubDate>Fri, 30 May 2014 04:31:26 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/after-a-long-hiatus/</guid>
+      <description>&lt;p&gt;I want to write again.&lt;/p&gt;
+
+&lt;p&gt;But first I needed to migrate my blog from Octopress to Ghost.
+I was happy with Octopress until I discovered every update/push took forever because I have 200+ posts.&lt;/p&gt;
+
+&lt;p&gt;Migration was not easy. Took me almost 4 nights. Essentially the problems for me were:&lt;/p&gt;
+
+&lt;p&gt;I didn&amp;rsquo;t push the markdown files that are supposed to be under &lt;code&gt;source/_posts&lt;/code&gt; to github.
+So I only have a bunch of published html files waiting to be converted back to markdown.
+During conversion it&amp;rsquo;s tricky to deal with Chinese characters, took me 1-2 nights to figure out.
+Loading Octopress markdown files to Ghost database. There&amp;rsquo;s a nice script available however some tweaks were needed to suit my use case.
+I decided not to integrate Disqus comments for now. Don&amp;rsquo;t worry I still have your previous comments in heart.&lt;/p&gt;
+
+&lt;p&gt;Please check out &lt;a href=&#34;https://github.com/ivylee/octoghost&#34;&gt;this&lt;/a&gt; repo if you&amp;rsquo;re wondering whether my experience might be helpful to you.&lt;/p&gt;
+
+&lt;p&gt;Finally I like the combination of &lt;a href=&#34;https://ghost.org&#34;&gt;Ghost&lt;/a&gt; + &lt;a href=&#34;https://github.com/axitkhurana/buster&#34;&gt;Buster&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com&#34;&gt;Github Pages&lt;/a&gt;
+as described &lt;a href=&#34;https://jackpearce.com/have-a-lightning-fast-blog-and-host-it-for-free&#34;&gt;here&lt;/a&gt; :) And I&amp;rsquo;m writing again!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Parallel Programming First Class</title>
+      <link>https://ivylee.github.io/post/parallel-programming-first-class/</link>
+      <pubDate>Mon, 09 Sep 2013 17:15:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/parallel-programming-first-class/</guid>
+      <description>&lt;p&gt;Today I took a taste of Parallel Programming course from CS dept,
+expecting it to be about achieving parallelization using a low-level
+language like C/C++ with intensive knowledge on computer theory etc.,
+however it turned out to be lectured by a researcher at IBM who
+introduced a language, X10, built on top of Java, with functional
+programming concept as in Scala. As X10 focuses on concurrency there’s
+new types and ‘struct’ as in C/C++. By using a simple example the class
+discussed common problems arise in concurrent computation, as appeared
+in using Hadoop.&lt;/p&gt;
+
+&lt;p&gt;Based on what I’ve learned today it seems the advantage of X10 is
+concurrency without the limitation of map-reduce paradigm. However X10
+is still under development, and seemed to be only used at IBM. Its
+popularity should increase by time, especially for tasks that are found
+to be difficult to tackle with Hadoop.&lt;/p&gt;
+
+&lt;p&gt;Reference: &lt;a href=&#34;http://x10-lang.org/&#34;&gt;http://x10-lang.org/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download List of Files With Bash and Wget in Command Line</title>
+      <link>https://ivylee.github.io/post/download-list-of-files-with-bash-and-wget-in-command-line/</link>
+      <pubDate>Tue, 11 Dec 2012 11:50:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/download-list-of-files-with-bash-and-wget-in-command-line/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Why&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Need to download a list of lecture slides from course page.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Example&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;for i in {11..19}; do wget -r -l1 http://someurl/slides_lecture$i.pdf;done;&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Note&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Inspect the url structure first. Easier to write one line of code than
+to create a general script.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t Panic</title>
+      <link>https://ivylee.github.io/post/dont-panic/</link>
+      <pubDate>Mon, 05 Nov 2012 21:45:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/dont-panic/</guid>
+      <description>&lt;p&gt;It is probably the &lt;a href=&#34;http://en.wikipedia.org/wiki/Don%27t_Panic_(The_Hitchhiker%27s_Guide_to_the_Galaxy)&#34;&gt;best
+advice&lt;/a&gt;
+given to human race.&lt;/p&gt;
+
+&lt;p&gt;At first, it seemed the city was overreacting. Shutting down public
+transportation, stopping schools, gathering food and water. All this,
+seemed unreal until I lost electricity at around 8.30 pm Oct. 29th.&lt;/p&gt;
+
+&lt;p&gt;Few minutes before that, I had my tv turned on, following the news while
+I had dinner. A man in uniform knocked on my door and asked if I had
+opened my windows since there were some strange noise and other
+residents complained. Of course I didn’t open my windows and I heard the
+noise too! Fortunately I wasn’t the only one that found the noise
+unpleasant. I grabbed a notice on the door handle regarding the storm as
+he left.&lt;/p&gt;
+
+&lt;p&gt;Just as I was going to clean up, after a flash everything went dark. Oh,
+power outage hit me.&lt;/p&gt;
+
+&lt;p&gt;Don’t panic.&lt;/p&gt;
+
+&lt;p&gt;I didn’t have my flash light prepared, because I never thought I’d be
+using it. After a while scrambling over my drawers in the dark, I
+managed to find my small carry-around flash light but no batteries. But
+I knew I brought one with me from China. So all I had to do was look
+again, this time more carefully. Then I found one, and another one. But
+getting a flash light didn’t help. I could do nothing about the
+electricity. I went out to the hall way, all the emergency lights on,
+and nobody was there. It was quiet. I guessed nobody panicked, which was
+great. Then I came back, wondering what I could do. I dialed the numbers
+on the notice and confirmed the whole building was in power outage and
+there was no news about when it would come back. I looked outside the
+window, funny thing was I could see the border of power outage, just
+right across the street. On the left everything was dark, on the right
+everything lit up. And police cars were rushing towards the
+neighbourhood.&lt;/p&gt;
+
+&lt;p&gt;I couldn’t study, which was what I planned for the night. I had to save
+the laptop battery, it was charged about 100%. I got the Powerbank, also
+from China, to charge my phone. I sent msgs with friends and family, did
+the trash, washed the dishes, showered and flossed before going to bed
+with sirens and lights outside.&lt;/p&gt;
+
+&lt;p&gt;At 3 am I woke up, it was still noisy. It is always noisy here, sirens
+roaring from 11 pm till midnight all the way through morning. I tried
+the lamp, still dark anyway. Then I went back to sleep, hoping things
+would work in the morning.&lt;/p&gt;
+
+&lt;p&gt;Around 8.40 am, I got up and tried the lights, still the same. I still
+had hot water, everything except electricity. My stove wasn’t working. I
+had to think about my food. Luckily without planning for emergency, I
+had bread, milk, orange juice, tomatoes, cucumbers, bananas and green
+grapes, all of which could be consumed without cooking. But I’d like my
+milk to be warm. The solution was filling the stockpot with hot tap
+water and put my mug with milk in. So I had a nice breakfast as usual,
+warm milk and a banana.&lt;/p&gt;
+
+&lt;p&gt;I dialed the numbers on the notice again, no news for power recovery. I
+had to figure out what to do for a whole day and worry about getting to
+school tomorrow if subway service was still suspended. About 6.5 hrs of
+battery left on my laptop. So I wrote this post and then started reading
+the textbook to prepare for midterm on Thursday morning.&lt;/p&gt;
+
+&lt;p&gt;Around noon, I noticed water coming out of my tap much more slower than
+usual. Worried that I might run out of it, I saved some using pans and
+anything that seemed to be capable of storing water. About half an hour
+later, the nightmare happened. No electricity, no water. I couldn’t even
+flush the toilet. One can live without electricity but NOT without
+water! This was the moment that I really panicked. I needed a place to
+live! Survive! I had to abandon my apt! I tried to call management
+office to confirm the water outage, but they didn’t seem to know what
+was going on.&lt;/p&gt;
+
+&lt;p&gt;I was very lucky. After posting on facebook and a few text msgs, I had
+options of places to stay. I had been very lucky since I came to New
+York. Life is an adventure. You’ll never know where it takes you,
+especially in face of disaster and uncertainty. I’d never thought the
+following days would turn out to be one of the happiest week of my life,
+the happiest I could be in the shadow of the storm.&lt;/p&gt;
+
+&lt;p&gt;I left my apt in the afternoon of Oct 30th, came back in the morning of
+Nov 4th. I might have been the luckiest and happiest refugee. Everything
+looked intact. All I needed to do was some cleaning, and life went back
+to normal. I did have a secret small wish that I could stay longer as a
+refugee. But life goes on! And life is better now that I have all those
+warm and happy memories.&lt;/p&gt;
+
+&lt;p&gt;C’est la vie. C’est ma vie.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Working With SAS on Columbia Unix Server</title>
+      <link>https://ivylee.github.io/post/working-on-columbia-unix-server/</link>
+      <pubDate>Mon, 22 Oct 2012 10:00:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/working-on-columbia-unix-server/</guid>
+      <description>&lt;p&gt;I’m taking two courses that use SAS this semester because SAS is rather
+widely used in industry. But it’s expensive and few students taking the
+same classes ever talked about buying the licence. So I have to use SAS
+on unix server, and this is rather painful experience.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;SSH into unix server is not a problem, but Kerberos authentication
+keeps asking for password whenever a connection is made, which means
+when SSH into the unix server and exchanging files between remote
+and local. having to type password over and over again is nightmare.&lt;/li&gt;
+&lt;li&gt;SAS version on unix server is quite old, 9.1.3 compared to 9.2 in
+computer labs.&lt;/li&gt;
+&lt;li&gt;the GUI of SAS unix can be launched by ssh -X, but it depends on the
+xserver of local, and I don’t like the experience.&lt;/li&gt;
+&lt;li&gt;some command line options better be added when running SAS on
+remote, to suppress unnecessary logging.&lt;/li&gt;
+&lt;li&gt;the SAS licence own by Columbia is expiring in about a month, SAS
+keeps popping warning messages in log file and there is no way to
+suppress them.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To address problem 1, solution I found so far is to obtain a Kerberos
+ticket valid for 10 hours so one does not have to enter password for a
+period of time, but it’s not a thorough solution due to the nature of
+Kerberos, there’s no way to avoid entering password forever.&lt;/p&gt;
+
+&lt;p&gt;The following is only tested on Mac OS X 10.8.2, solution should be
+similiar on Unix/Linux machines.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ scp [uni]@cunix.cc.columbia.edu:/etc/krb5.conf ~/
+
+$ sudo mv ~/krb5.conf /etc/
+$ sudo vim /etc/krb5.conf
+    # add the following in [libdefaults] section
+    forward = true
+    forwardable = true
+    renewable = true
+  :wq
+
+$ vim ~/.ssh/config
+    # add the following lines
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+  :wq
+
+$ kinit [uni] # enter password
+$ klist # to check ticket status
+$ ssh [uni]@cunix.cc.columbia.edu # should connect without prompting password
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To make life easier, add some shortcuts&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ vim ~/.bashrc
+    alias cussh=&#39;ssh [uni]@cunix.cc.columbia.edu&#39;
+    export unixhome=[uni]@cunix.cc.columbia.edu:[$home location]
+  :wq
+
+# login to remote server
+$ cussh
+# uploading
+$ scp [local files] $unixhome/[remote location]
+# downloading
+$ scp $unixhome/[remote files] [local]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Each ticket is only valid for 10 hrs, which is a parameter set on
+Kerberos server. Ticket can be renewed before expiration by&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ kinit -R
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ref &amp;amp; further info:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://web.mit.edu/kerberos/krb5-current/doc/krb_users/tkt_mgmt.html&#34;&gt;Kerberos
+doc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://weblion.psu.edu/trac/weblion/wiki/KerberizeYourSshClient&#34;&gt;Kerbenize ssh
+client&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ugcs.caltech.edu/Kerberized_SSH.xhtml&#34;&gt;kinit automatically when
+necessary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://coxmanagement.wordpress.com/2012/05/07/kerberos-authentication-under-lion/&#34;&gt;Kerberos with PAM under
+Lion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For problem 2 and 3, stop by computer labs to use SAS 9.2 on Windows
+machine with GUI.&lt;/p&gt;
+
+&lt;p&gt;Some options to supply on command line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sas -nodms -nonews [program.sas]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Other options to put in *.sas file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;options nodate nonumber nocenter ls=70 ps=80;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As for problem 5, hopefully Columbia will upgrade SAS to 9.2 or 9.3.
+Just see what happens.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Perceptron</title>
+      <link>https://ivylee.github.io/post/my-first-machine-learning-algo-perceptron/</link>
+      <pubDate>Wed, 26 Sep 2012 10:49:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/my-first-machine-learning-algo-perceptron/</guid>
+      <description>&lt;p&gt;To me, a novice programmer, understanding the algorithm is much more
+easier than writing it. This is my first homework assignment of the Data
+Mining/Machine Learning course I’m taking this semester, taught by
+Professor &lt;a href=&#34;http://stat.columbia.edu/~porbanz/&#34;&gt;Peter Orbanz&lt;/a&gt; . The
+perceptron algorithm is a simple idea for linear classification. R is
+really handy :)&lt;/p&gt;
+
+&lt;p&gt;Feel free to check out the perceptron algorithm, including both batch
+perceptron and fix increment single sample perceptron, in my github repo
+&lt;a href=&#34;https://github.com/ivylee/machine-learning&#34;&gt;machine-learning&lt;/a&gt; .&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Minimalistic Resume Template</title>
+      <link>https://ivylee.github.io/post/my-resume-template/</link>
+      <pubDate>Sun, 09 Sep 2012 21:41:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/my-resume-template/</guid>
+      <description>&lt;p&gt;Here I am. Just arrive, getting used to New York, excited about new life
+and new things to learn.&lt;/p&gt;
+
+&lt;p&gt;LaTeX is very nice for writing structured documents. I used to prepare
+my resume using &lt;a href=&#34;http://www.ctan.org/pkg/moderncv&#34;&gt;moderncv&lt;/a&gt; . It was
+really nice, easy and beautiful. But somehow I find it a little bit too
+fancy now. I decided to write my own resume class, no coloring no
+pictures just plain and simple. I used LaTeX for my undergraduate thesis
+and I modified thesis templates from other sources to fit my thesis
+format requirements, but I’ve never build a template from ground up
+myself. So the resume template, it was good exercise. Now I’m not scared
+of writing LaTeX class files anymore. :)&lt;/p&gt;
+
+&lt;p&gt;Btw it’s
+&lt;a href=&#34;https://github.com/ivylee/latex/blob/master/my_resume.cls&#34;&gt;here&lt;/a&gt; .&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>重複的夢</title>
+      <link>https://ivylee.github.io/post/repeated-dreams/</link>
+      <pubDate>Fri, 03 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/repeated-dreams/</guid>
+      <description>&lt;p&gt;某種記憶是一組相連的神經元，當大腦已經遺忘的時候，會突然出現，熟悉又完整。&lt;/p&gt;
+
+&lt;p&gt;前天的夢：牙齒脫落&lt;/p&gt;
+
+&lt;p&gt;睡眠中突然有意識，很驚恐，手一碰右邊門牙和門牙右邊那顆牙，它們就掉了，有點疼，又不是特別疼，繼續很驚恐，到處求助如何把牙安上去或者裝假牙，在驚恐中回憶起以前曾做過這樣的夢，但是同樣不知所措，在驚恐焦慮中又睡着了。&lt;/p&gt;
+
+&lt;p&gt;今天的夢：北韓間諜活動&lt;/p&gt;
+
+&lt;p&gt;睡眠中，意識出現，我，我父母，我的一個女同學，在一個北韓鄉村顯要人物家裏受邀吃飯，緊張的氣氛。我意識到自己曾經做過這個夢，而且結局是鄉村顯要人物家庭一位女性年長成員死了並且屍體送到我以前的住處，於是我努力想改變結局，要在夢中嘗試不同的做法。我想幫助那位年長的成員，她可能是僕人，可能是家中長輩，她喪命的原因是那位鄉村顯要發現我們是間諜而我們又幫助了那位年長女性。於是我決定，同樣地，要幫助那位女性，而且要在別人下手前保護她。在餐桌上，正如上一次夢境，緊張有序地進食，我作出的改變是提示同學和我一起到廚房幫助那位年長女性準備食材。在廚房我們與她交談，她略顯緊張，但也接受我們的幫助，僅僅是準備食材而已。飯局結束，我意識到那位年長女性即將性命不保，敦促家人趕緊回家，以防年長女性在我們家裏被殺害留下血跡作爲對我們的震懾。內心緊張外表鎮定從容地趕路，路上我靈機一動買了一大桶灰色塑料包裝的漿糊，和一桶白色油漆，必要時可以把門粘起來作爲抵抗。到家上樓時，見到一個大紙皮箱，可裝入一個人那種，還有兩位快遞人員等候我們簽收。我心裏很害怕，怕還是遲來了一步。誰知道，簽收時，包裹裏竟然是另一個男人的屍體，一個我們沒有印象的人。猶豫了一陣，我安慰自己，幸好不是她，正在想接下來怎麼辦時，電鑽響了我醒了。&lt;/p&gt;
+
+&lt;p&gt;經常在夢中，我意識到自己在做夢，並且用自己的意志去改變夢境，而不是由夢引導自己的思想。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>不務正業理想課程</title>
+      <link>https://ivylee.github.io/post/ideal-coursework/</link>
+      <pubDate>Mon, 16 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/ideal-coursework/</guid>
+      <description>&lt;p&gt;話說多年來與母上聊天過程中，提到過幾種非傳統教育涉及的職業及專業培訓，很驚喜地在與好友阿靚聊天過程中，找回對那些專業培訓的嚮往，簡單列舉，日後希望有機會嘗試完成：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;廚藝課程（即使修成不夠開餐館，也有能力填飽自己）&lt;/li&gt;
+&lt;li&gt;調酒師課程 Bar-tendering （因爲自己喜歡 cocktail,
+大一曾學習過相關課程，礙於學業未能繼續，甚爲遺憾。有此專業訓練可成爲
+Bar tender, 甚至創業開酒吧）&lt;/li&gt;
+&lt;li&gt;咖啡師 （亦在大一參與的課程學習過相關知識）&lt;/li&gt;
+&lt;li&gt;評酒師（要求敏感的味覺，母上覺得我可以）&lt;/li&gt;
+&lt;li&gt;調香師（敏感的嗅覺）（以上兩者我暫時未知道有確實的課程）&lt;/li&gt;
+&lt;li&gt;壽司學徒（喜愛壽司，以及其製作的過程。向喜愛壽司的朋友推薦紀錄片：《壽司之神》）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;一向接受傳統教育的我，感覺到缺乏對某種事物無止境的熱情。希望將來我能夠有時間和能力，追求一種屬於自己熱愛的可以不斷練習鑽研的東西。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Colors</title>
+      <link>https://ivylee.github.io/post/colors/</link>
+      <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/colors/</guid>
+      <description>&lt;p&gt;今天突然间超级无聊，折腾起 Bash prompt 和 dircolors…=_= 不喜欢
+solarized, 也不喜欢 Ubuntu
+默认的紫色低白字，duckduckgo&amp;amp;google了一轮才明白 Bash prompt
+用那么奇怪的颜色代号，和只有那么少的颜色，而且是 gnome-terminal profile
+设置的颜色。dircolors支持256colors，把颜色全部列出来一个个看顺眼才写进配置里真累…..折腾完觉得好看多了，可是，好，无，聊，啊，我！&lt;/p&gt;
+
+&lt;p&gt;反正现在都 zenburn 了，以后也懒得再弄。&lt;/p&gt;
+
+&lt;p&gt;另外 Bash 好难&amp;gt;_&amp;lt;&lt;/p&gt;
+
+&lt;p&gt;好久没写东西一写居然是此等无聊之作，好无聊…流离失所的无奈&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kony 2012. ?</title>
+      <link>https://ivylee.github.io/post/kony-2012/</link>
+      <pubDate>Sun, 11 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/kony-2012/</guid>
+      <description>&lt;p&gt;learned about Kony 2012 campaign yesterday, from sina weibo
+&lt;strong&gt;suprisingly not from twitter since i haven’t been checking my timeline
+often&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;then i watched the campaign video. it talked about the crimes of the
+leader of LRA, a rebellion group whose base was once uganda, which i
+infer from the map change. the LRA leader, joseph kony, commits war
+crimes, abducts kids, turning boys into soldiers girls into sex slaves.
+kony fights without outside support, and is presumably good at hiding
+and fighting in the woods. invisible children inc., presumably lead by
+the narrator of the video, filmed frightened kids who were afraid of
+abduction, set out to help those kids by raising the awareness of this
+issue and setting up proper schools for them. and now they want more
+people to know about joseph kony, by making this video and planning
+following actions. they have asked us government to send troops to help
+local forces finding kony and they have asked many celebrities and
+politicians for their influence.&lt;/p&gt;
+
+&lt;p&gt;but why this year? the video will be expired at the end of 2012, why?
+looking at a broader picture, i guess the only answer is the us
+government has set a date that their deployed troops in uganda or where
+they are needed to be have to return, whether the mission succeed or
+not; or there’s no fixed date, but troops will be returned if there’s no
+consistent or increasing support of this campaign/mission. that’s why
+the invisible children inc. tries so hard to push and gain support of
+their cause. but i don’t see national even global support is the
+concrete solution of this problem. demands of such cause cannot assure
+capture of the bad guy, it would only turn into pressure for us
+government which, from my point of view, can be easily set aside, either
+by a strong will to abort the mission or by raising another urgent
+issue. and this is the election year, invisible children inc. cleverly
+use it and gather support from both parties. it’s not likely to become a
+big issue in election campaign nonetheless candidates will have to treat
+it or use it wisely.&lt;/p&gt;
+
+&lt;p&gt;westerners go to africa, see the lives of poor africans and do their
+best to save them. this kind of story has been told and has been going
+on. almighty west saves the world. but is this how the world functions?
+the video made by invisible children inc. did not talk anything about
+how kony became a rebellion, what was the problem in those areas of
+africa that was causing the fight. what was kony fighting for? just to
+abduct more kids? this is the central cause of conflict. and how do the
+military forces in africa deal with this rebellion group? i learn
+nothing from the video. when there’s long term conflict or insolvable
+issue or running criminals in other parts of the world, americans ask
+their government to send troops and deal with it, on other countries’
+land, all due to americans idea of humanity and justice, does this sound
+weird? americans are so heroic, they must think african people need them
+badly.&lt;/p&gt;
+
+&lt;p&gt;kony already knows the americans are after him. when he will be
+captured, dead or alive is an interesting question which defines the
+success of invisible children inc. and the us government operations. if
+kony is captured by the end of this year, this case will surely be an
+example of us-defended-humanity-by-military-intervention-abroad. if
+failed or discontinued at some point, those americans will be greatly
+embarrassed and operations of this kind will definitely be harder than
+before.&lt;/p&gt;
+
+&lt;p&gt;it’s not true that only the americans care about these issues, it’s just
+that they are good at campaigning. after i watch the campaign video, i
+signed the pledge too. but then i cooled down my head, hesitated and
+wondered if this is a proper approach of solving problems like this.
+campaigns do not actually solve the problem it’s for sure. various
+doubts on this campaign and the video are plenty on youtube and other
+websites.&lt;/p&gt;
+
+&lt;p&gt;social media spread issues can quickly capture people’s eyes and minds,
+and even blind them. stay clear and stay alert. try to ask yourself a
+few questions before retweeting. i’ll be keeping track of this campaign
+cuz the result will definitely be interesting.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

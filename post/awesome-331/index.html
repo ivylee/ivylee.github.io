@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Awesome 3.3.1! - Bits" property="og:title">
+<title>Awesome 3.3.1! | Bits</title>
+<link rel="stylesheet" href="https://ivylee.github.io/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ivylee.github.io"><h1 class="title is-4">Bits</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://ivylee.github.io/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">July 28, 2009</h2>
+    <h1 class="title">Awesome 3.3.1!</h1>
+    
+    <div class="content">
+      <p>第一次接触tiling…</p>
+
+<p>装awesome 3.3.1的过程还好，因为找到个
+<a href="https://launchpad.net/~akos-ladanyi/+archive/ppa" title="ppa for awesome 3.3.1">ppa</a>
+(for ubuntu 9.04 &amp; 9.10)</p>
+
+<p>装完之后痛苦了….</p>
+
+<p>建立两个文件：.xinitrc &amp; .xsession to use awesome with gnome</p>
+
+<p>编辑rc.lua &amp; theme.lua</p>
+
+<p>一定要仔细看 <a href="http://awesome.naquadah.org/wiki/Main_Page">awesome wiki</a>
+，因为里面一些example适用于旧版本的awesome，据说awesome更新喜欢用新语言（3.x是lua）写配置文件，郁闷得很….有个
+<a href="http://confusedfly.yo2.cn/articles/tag/awesome">中文笔记</a>
+（貌似唯一的）适合学习， <a href="http://wiki.ubuntu.org.cn/Awesome">ubuntu
+wiki</a> 上是同一个人写的，连贯性较好</p>
+
+<p>折腾了两天，没啥进展，截图如下 <a href="http://www.ipernity.com/doc/sychopx/5492654"><img src="http://u1.ipernity.com/12/26/54/5492654.0bb52cd7.500.jpg" alt="awesome
+3.3.1" /></a>
+要注意的是改变theme文件（夹）路径时要及时更改两个配置文件中的path。我的Mod4+ctrl+r无法restart
+awesome…只能在menu里按restart(bug?)…如果重新进x发现awesome不正常，记得ctrl+alt+f1看.xsession-errors；awesome
+-k file只能检查设置文件的明显的syntax error，基本没啥用…</p>
+
+<p>好习惯：每次修改完rc.lua restart awesome之前backup
+–&gt;rc.lua~，若awesome不正常，ctrl+alt+f1 用备份文件restore rc.lua</p>
+
+<p>好在3.x有debian-menu，不然麻烦死…勉强能用，现在还有好多问题，好惨…</p>
+
+<p>awesome wiki上有好多牛配置，在deviantart上也有一些比较好看的，still a
+long way to go~</p>
+
+<p>*cpu 貌似大部分时间&lt;=5%，厉害，记得以前用gnome一般都在15％～25%</p>
+
+<p>*key bindings弄好啦~</p>
+
+<p>*tag names 搞定～</p>
+
+<p>wallpaper有点问题，貌似和gnome冲突，每次restart
+awesome壁纸就不见剩一片蓝灰…</p>
+
+<p>Last edited by sychopx on August 10, 2009 at 11:52 pm</p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/ivylee">Ivy Lee</a> 2017</p>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Base64 Encrypted Pac File on Opera - Bits" property="og:title">
+<title>Base64 Encrypted Pac File on Opera | Bits</title>
+<link rel="stylesheet" href="https://ivylee.github.io/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ivylee.github.io"><h1 class="title is-4">Bits</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://ivylee.github.io/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">July 14, 2010</h2>
+    <h1 class="title">Base64 Encrypted Pac File on Opera</h1>
+    
+    <div class="content">
+      <p>as an enthusiast of the sport <em>climbing over the wall</em> as well as an
+opera fans, it puzzled me greatly when i found out opera on linux cannot
+use the latest autoproxy.pac from the familiar
+<a href="http://autoproxy2pac.appspot.com/">autoproxy2pac</a> . i tried to open
+with vim and compare the old and new pac files, found out that the old
+one was clearly structured, recognizable while the new one was a bunch
+of weird code. i had absolutely no idea what the new one was about.</p>
+
+<p>so for a long time, i stuck with the old pac file and of course that
+wasn’t convenient at all cuz the gfw team kept working so should the pac
+file be updating.</p>
+
+<p>lately when i was trying to modify the old pac file, i googled and found
+<a href="http://bbs.operachina.com/viewtopic.php?f=30&amp;t=78095">this</a> post. yep,
+now the problem is quite clear! the new pac file is base64 encrypted! so
+to get the new pac file working on opera for linux,</p>
+
+<blockquote>
+<p>vim autoproxy.pac</p>
+</blockquote>
+
+<p>delete everything before and including</p>
+
+<blockquote>
+<p>﻿﻿﻿﻿﻿decode64(”</p>
+</blockquote>
+
+<p>and</p>
+
+<blockquote>
+<p>”))</p>
+</blockquote>
+
+<p>at the end of the pac file. then :wq(save and exit). in terminal,</p>
+
+<blockquote>
+<p>base64 -d autoproxy.pac &gt; autoproxy_new.pac</p>
+</blockquote>
+
+<p>then opera for linux can read autoproxy_new.pac :)</p>
+
+<p>*opera for win can read the new pac file without any problem. opera for
+win also cannot read encrypted pac file.</p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/ivylee">Ivy Lee</a> 2017</p>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

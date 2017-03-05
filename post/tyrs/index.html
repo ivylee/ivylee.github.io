@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Tyrs - Bits" property="og:title">
+<title>Tyrs | Bits</title>
+<link rel="stylesheet" href="https://ivylee.github.io/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ivylee.github.io"><h1 class="title is-4">Bits</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://ivylee.github.io/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">November 7, 2011</h2>
+    <h1 class="title">Tyrs</h1>
+    
+    <div class="content">
+      <p>came across this great ncurses twitter client from hackernews feed which
+i just subscribed few days ago.</p>
+
+<p>it’s like bitlbee+irssi, it’s like TTYtter and it’s not.</p>
+
+<p><a href="http://sychopx.files.wordpress.com/2011/11/2011-11-07-220506_1280x800_scrot.png"><img src="http://sychopx.files.wordpress.com/2011/11/2011-11-07-220506_1280x800_scrot.png?w=300" alt="" title="2011-11-07-220506_1280x800_scrot" /></a></p>
+
+<p>i think it’s much more elegant, functional and user-friendly.</p>
+
+<p>it’s developed by a french guy who uses arch linux. WE ARCHERS can get
+tyrs by firing up yaourt -S tyrs :) available on other major linux
+distributions as well. fairly thorough documentation, easy to start.</p>
+
+<p>this nice french guy introduced tyrs on his
+<a href="http://www.nicosphere.net/tyrs-a-microblogging-client-based-on-ncurses-2534/" title="Tyrs">blog</a>
+/ <em>seems beyond the wall, u know</em> / and started a discussion
+<a href="https://bbs.archlinux.org/viewtopic.php?id=119588">thread</a> on arch
+linux forum which he does follow closely and reply and
+<a href="http://tyrs.nicosphere.net/index.html">here</a> is project homepage with
+the link to github repo</p>
+
+<p>alrite. Chinese style of using tyrs:</p>
+
+<p>oauth: ssh&gt;socks proxy&gt;proxychains tyrs</p>
+
+<p>use polipo to turn socks5 proxy into http proxy.</p>
+
+<p>setup tyrs proxy: (it’s implemented in the latest release version of
+tyrs, instruction not on docs yet)</p>
+
+<p>edit ~/.config/tyrs/tyrs.cfg</p>
+
+<p>in section [params], add</p>
+
+<blockquote>
+<p>proxy = [http_proxy_address]:[port]</p>
+</blockquote>
+
+<p>or</p>
+
+<blockquote>
+<p>proxy = [username]:[password]@[http_proxy_address]:[port]</p>
+</blockquote>
+
+<p>note: do not prefix “http://” in the address</p>
+
+<p>issues regarding the wall, the obstacle to twitter should be gone now.</p>
+
+<p>bunch of things u can customize, layouts, colors, keybindings etc. one
+particular nice idea of tyrs is its activity bar, showing new tweet
+counts in home tab, mention tab etc., good visual notification.</p>
+
+<p>i believe adding support for twitter api proxy is possible tho
+personally i’m not interested. i think requesting api support is too
+much for non Chinese developers. tyrs comes with support for identica,
+worth trying with twitter api.</p>
+
+<p>tyrs has the greatest potential of becoming my favourite twitter desktop
+client. it’s neat, simplistic, elegant and fully functional,
+customizable. hope more ppl will see the beauty of it.</p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/ivylee">Ivy Lee</a> 2017</p>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

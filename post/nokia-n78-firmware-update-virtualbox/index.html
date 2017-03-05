@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="" name="keywords">
+<meta content="Nokia N78 在 VirtualBox 下成功刷机 - Bits" property="og:title">
+<title>Nokia N78 在 VirtualBox 下成功刷机 | Bits</title>
+<link rel="stylesheet" href="https://ivylee.github.io/css/style.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ivylee.github.io"><h1 class="title is-4">Bits</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://ivylee.github.io/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">September 1, 2009</h2>
+    <h1 class="title">Nokia N78 在 VirtualBox 下成功刷机</h1>
+    
+    <div class="content">
+      <p>艰难啊！</p>
+
+<p>上一次刷机大约是2月份左右，本想刷出FM，未果，只修正了music
+library的刷新问题。</p>
+
+<p>这次本想在vista下刷，Nokia PC Suite 和NSS都安装好了，用NSS
+scan的时候总是error，可能是上次刷机未果的后遗症(后来发现NSS不支持FP2的机型)。不爽之下决定在VirtualBox的xp试下。奇怪的usb总是用不了，害我重装了VirtualBox，总结一下关键在于fstab和新建一个empty
+filter…</p>
+
+<p>刷机前先用PC Suite backup，刷机过程参考了：</p>
+
+<p><a href="http://www.dos60.com/thread-377-1-1.html">凤凰刷机2009教程</a></p>
+
+<p><a href="http://www.shuaji.net/sjjc/nokia/2009/121/091829G78AFE5G5K40GI_2.shtml">诺基亚刷机_凤凰刷机工具2008详细教程</a></p>
+
+<p>用的Firmware是</p>
+
+<p><a href="http://www.dos60.com/thread-97-1-2.html">N78 RM-235 APAC 30.011 V7.0</a></p>
+
+<p>刷机成功，出现FM transmitter 的菜单，可是music library
+的刷新问题又出现了，想用PC Suite的Nokia Music看看，竟然装不上…..</p>
+
+<p>额…不管Music
+Manager了，原来把存储卡里乱码的目录删了就能正常刷新…搞定哈哈</p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; <a href="https://github.com/ivylee">Ivy Lee</a> 2017</p>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
