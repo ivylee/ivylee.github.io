@@ -7,8 +7,83 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://github.com/ivylee&#34;&gt;Ivy Lee&lt;/a&gt; 2017</copyright>
-    <lastBuildDate>Sat, 04 Mar 2017 16:15:05 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 10 Dec 2017 13:47:48 -0500</lastBuildDate>
     <atom:link href="https://ivylee.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>training monitoring with Visdom and Hyperdash</title>
+      <link>https://ivylee.github.io/post/training-monitoring-visdom-hyperdash/</link>
+      <pubDate>Sun, 10 Dec 2017 13:47:48 -0500</pubDate>
+      
+      <guid>https://ivylee.github.io/post/training-monitoring-visdom-hyperdash/</guid>
+      <description>
+
+&lt;p&gt;For the past few months, I have enjoyed using &lt;a href=&#34;https://github.com/facebookresearch/visdom&#34;&gt;Visdom&lt;/a&gt; and &lt;a href=&#34;https://hyperdash.io&#34;&gt;Hyperdash&lt;/a&gt; to monitor training processes.&lt;/p&gt;
+
+&lt;h3 id=&#34;visdom&#34;&gt;Visdom&lt;/h3&gt;
+
+&lt;p&gt;Visom is a Python library developed by Facebook Research. Similar to &lt;a href=&#34;https://www.tensorflow.org/get_started/summaries_and_tensorboard&#34;&gt;Tensorboard&lt;/a&gt;,
+it provides a UI server (using React) through which user can create scatter plots, histograms, visualize images and text.&lt;/p&gt;
+
+&lt;p&gt;I have written a small snippet for creating and updating a scatter plot,
+which can be used for visualizing training and validation loss and accuracy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# pip install visdom numpy
+# visualize.py
+import numpy
+from visdom import Visdom
+
+class Plot(object):
+    def __init__(self, title, port=8080):
+        self.viz = Visdom(port=port)
+        self.windows = {}
+        self.title = title
+
+    def register_scatterplot(self, name, xlabel, ylabel):
+        win = self.viz.scatter(
+            X=numpy.zeros((1, 2)),
+            opts=dict(title=self.title, markersize=5, xlabel=xlabel, ylabel=ylabel)
+        )
+        self.windows[name] = win
+
+    def update_scatterplot(self, name, x, y):
+        self.viz.updateTrace(
+            X=numpy.array([x]),
+            Y=numpy.array([y]),
+            win=self.windows[name]
+        )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In my training script, I can initialize and update the plots.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# train.py
+import visualize
+
+plot = visualize.Plot(&amp;quot;Model A&amp;quot;)
+plot.register_scatterplot(&amp;quot;Loss&amp;quot;, &amp;quot;Epoch&amp;quot;, &amp;quot;Loss&amp;quot;)
+for n in range(epoch):
+    # ... compute average loss over training data
+    plot.update_scatterplot(&amp;quot;Loss&amp;quot;, n + 1, loss)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Before running the training script, we need to start the web server, so that after training starts,
+we can go to &lt;code&gt;localhost:8080&lt;/code&gt; in the browser to see the plots.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;python -m visdom.server -p 8080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above snippets can also be found &lt;a href=&#34;https://gist.github.com/ivylee/b2f47d1ad787d7f7079c596bb0ac9c0f&#34;&gt;here&lt;/a&gt;.
+&lt;a href=&#34;https://github.com/pytorch/tnt&#34;&gt;PyTorchNet&lt;/a&gt; library provides more &lt;a href=&#34;https://github.com/pytorch/tnt/blob/master/torchnet/logger/visdomlogger.py&#34;&gt;loggers&lt;/a&gt; for plots, images, and text, it can be very handy if you&amp;rsquo;re a PyTorch user.&lt;/p&gt;
+
+&lt;h3 id=&#34;hyperdash&#34;&gt;Hyperdash&lt;/h3&gt;
+
+&lt;p&gt;Visdom is great for visualizing plots and images, however connection to a remote server isn&amp;rsquo;t always available.
+Hyperdash can stream training logs from a process on a remote server directly to my phone.
+I can simply open the mobile app to know if the training process died, or loss is no longer decreasing.
+The set up is quite simple, all necessary steps are documented in the &lt;a href=&#34;https://hyperdash.io&#34;&gt;homepage&lt;/a&gt;.
+One caveat is that it does not work well with &lt;code&gt;tqdm&lt;/code&gt; (see &lt;a href=&#34;https://github.com/hyperdashio/hyperdash-sdk-py/issues/63&#34;&gt;issue 63&lt;/a&gt;), simply disable &lt;code&gt;tqdm&lt;/code&gt; in the training script.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>a minimal training plot server</title>
@@ -581,86 +656,6 @@ solarized, 也不喜欢 Ubuntu
 &lt;p&gt;另外 Bash 好难&amp;gt;_&amp;lt;&lt;/p&gt;
 
 &lt;p&gt;好久没写东西一写居然是此等无聊之作，好无聊…流离失所的无奈&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kony 2012. ?</title>
-      <link>https://ivylee.github.io/post/kony-2012/</link>
-      <pubDate>Sun, 11 Mar 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivylee.github.io/post/kony-2012/</guid>
-      <description>&lt;p&gt;learned about Kony 2012 campaign yesterday, from sina weibo
-&lt;strong&gt;suprisingly not from twitter since i haven’t been checking my timeline
-often&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;then i watched the campaign video. it talked about the crimes of the
-leader of LRA, a rebellion group whose base was once uganda, which i
-infer from the map change. the LRA leader, joseph kony, commits war
-crimes, abducts kids, turning boys into soldiers girls into sex slaves.
-kony fights without outside support, and is presumably good at hiding
-and fighting in the woods. invisible children inc., presumably lead by
-the narrator of the video, filmed frightened kids who were afraid of
-abduction, set out to help those kids by raising the awareness of this
-issue and setting up proper schools for them. and now they want more
-people to know about joseph kony, by making this video and planning
-following actions. they have asked us government to send troops to help
-local forces finding kony and they have asked many celebrities and
-politicians for their influence.&lt;/p&gt;
-
-&lt;p&gt;but why this year? the video will be expired at the end of 2012, why?
-looking at a broader picture, i guess the only answer is the us
-government has set a date that their deployed troops in uganda or where
-they are needed to be have to return, whether the mission succeed or
-not; or there’s no fixed date, but troops will be returned if there’s no
-consistent or increasing support of this campaign/mission. that’s why
-the invisible children inc. tries so hard to push and gain support of
-their cause. but i don’t see national even global support is the
-concrete solution of this problem. demands of such cause cannot assure
-capture of the bad guy, it would only turn into pressure for us
-government which, from my point of view, can be easily set aside, either
-by a strong will to abort the mission or by raising another urgent
-issue. and this is the election year, invisible children inc. cleverly
-use it and gather support from both parties. it’s not likely to become a
-big issue in election campaign nonetheless candidates will have to treat
-it or use it wisely.&lt;/p&gt;
-
-&lt;p&gt;westerners go to africa, see the lives of poor africans and do their
-best to save them. this kind of story has been told and has been going
-on. almighty west saves the world. but is this how the world functions?
-the video made by invisible children inc. did not talk anything about
-how kony became a rebellion, what was the problem in those areas of
-africa that was causing the fight. what was kony fighting for? just to
-abduct more kids? this is the central cause of conflict. and how do the
-military forces in africa deal with this rebellion group? i learn
-nothing from the video. when there’s long term conflict or insolvable
-issue or running criminals in other parts of the world, americans ask
-their government to send troops and deal with it, on other countries’
-land, all due to americans idea of humanity and justice, does this sound
-weird? americans are so heroic, they must think african people need them
-badly.&lt;/p&gt;
-
-&lt;p&gt;kony already knows the americans are after him. when he will be
-captured, dead or alive is an interesting question which defines the
-success of invisible children inc. and the us government operations. if
-kony is captured by the end of this year, this case will surely be an
-example of us-defended-humanity-by-military-intervention-abroad. if
-failed or discontinued at some point, those americans will be greatly
-embarrassed and operations of this kind will definitely be harder than
-before.&lt;/p&gt;
-
-&lt;p&gt;it’s not true that only the americans care about these issues, it’s just
-that they are good at campaigning. after i watch the campaign video, i
-signed the pledge too. but then i cooled down my head, hesitated and
-wondered if this is a proper approach of solving problems like this.
-campaigns do not actually solve the problem it’s for sure. various
-doubts on this campaign and the video are plenty on youtube and other
-websites.&lt;/p&gt;
-
-&lt;p&gt;social media spread issues can quickly capture people’s eyes and minds,
-and even blind them. stay clear and stay alert. try to ask yourself a
-few questions before retweeting. i’ll be keeping track of this campaign
-cuz the result will definitely be interesting.&lt;/p&gt;
 </description>
     </item>
     
