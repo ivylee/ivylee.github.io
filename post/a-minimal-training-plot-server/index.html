@@ -1,59 +1,58 @@
-
 <!DOCTYPE html>
-<html lang="en-us">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="" name="keywords">
-<meta content="a minimal training plot server - Bits" property="og:title">
-<title>a minimal training plot server | Bits</title>
-<link rel="stylesheet" href="https://ivylee.github.io/css/style.css">
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<html lang="en">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+		<title>a minimal training plot server &middot; Bits</title>
 
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-<section class="section">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="https://ivylee.github.io"><h1 class="title is-4">Bits</h1></a>
-      </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="https://github.com/ivylee">
-            <span class="icon">
-              <i class="fa fa-github"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://ivylee.github.io/index.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-          </a>
-          
-        </nav>
-      </div>
-    </nav>
-  </div>
-</section>
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Bits" />
+	</head>
 
-<section class="section">
-  <div class="container">
-    <h2 class="subtitle is-6">March 4, 2017</h2>
-    <h1 class="title">a minimal training plot server</h1>
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">Bits</h2>
+				</a>
+				<ul>
     
-    <div class="content">
-      <p>Training a deep convolutional neural network (CNN) can be a lengthy process.
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        Ivy Lee
+        <br>
+        <span>on&nbsp;</span><time datetime="2017-03-04 16:15:05 -0500 EST">March 4, 2017</time>
+</div>
+		<h1 class="post-title">a minimal training plot server</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>Training a deep convolutional neural network (CNN) can be a lengthy process.
 We usually want to monitor training loss and accuracy and validation loss and accuracy by plotting how these metrics
 change as the number of minibatches grows on a graph.
 <a href="https://www.tensorflow.org">Tensorflow</a> provides <a href="https://www.tensorflow.org/get_started/summaries_and_tensorboard">Tensorboard</a> for visualizing training progress.
 Recently I have been playing with <a href="http://pytorch.org">PyTorch</a>, I really like its expresiveness and flexibility.
 Here&rsquo;s a strategy for visualizing training progress with
 any learning framework that doesn&rsquo;t provide Tensorboard-equivalent feature out of the box using Python 3.</p>
-
-<p></p>
 
 <p>First of all as a good practice we output relevant metrics into a log file, the log file should be structured in a way
 that is easy to parse and extract metrics. We will need to write a parser method, and a plot method to generate desired
@@ -144,22 +143,25 @@ if __name__ == &quot;__main__&quot;:
 </code></pre>
 
 <p>This snippet can also be found <a href="https://gist.github.com/ivylee/f1b00ce54f948e627605598ccf3cf4b9">here</a>.</p>
-    </div>
-  </div>
-</section>
 
 
-<section class="section">
-  <div class="container has-text-centered">
-    <p>&copy; <a href="https://github.com/ivylee">Ivy Lee</a> 2017</p>
-  </div>
-</section>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+		
+	</div>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+	<div class="pagination">
+		<a href="/post/in-guangzhou/" class="left arrow">&#8592;</a>
+		<a href="/post/training-monitoring-visdom-hyperdash/" class="right arrow">&#8594;</a>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
 
 
+        		<footer>
+			<span>
+			&copy; <time datetime="2019-11-04 13:54:48.373967 -0500 EST m=&#43;0.282145607">2019</time> Ivy Lee.
+			</span>
+		</footer>
+
+    </body>
+</html>
