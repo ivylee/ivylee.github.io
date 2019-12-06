@@ -12,9 +12,6 @@
   		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/fonts.css">
 		
-		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
 		
 		<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Bits" />
@@ -40,6 +37,28 @@
 
 
 	<div class="catalogue">
+		
+			<a href="https://ivylee.github.io/post/nokia-n78-firmware-update-virtualbox/" class="catalogue-item">
+    <div>
+        <time datetime="2009-09-01 00:00:00 &#43;0000 UTC" class="catalogue-time">September 1, 2009</time>
+        <h1 class="catalogue-title">Nokia N78 在 VirtualBox 下成功刷机</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            艰难啊！
+上一次刷机大约是2月份左右，本想刷出FM，未果，只修正了music library的刷新问题。
+这次本想在vista下刷，Nokia PC Suite 和NSS都安装好了，用NSS scan的时候总是error，可能是上次刷机未果的后遗症(后来发现NSS不支持FP2的机型)。不爽之下决定在VirtualBox的xp试下。奇怪的usb总是用不了，害我重装了VirtualBox，总结一下关键在于fstab和新建一个empty filter…
+刷机前先用PC Suite backup，刷机过程参考了：
+凤凰刷机2009教程
+诺基亚刷机_凤凰刷机工具2008详细教程
+用的Firmware是
+N78 RM-235 APAC 30.011 V7.0
+刷机成功，出现FM transmitter 的菜单，可是music library 的刷新问题又出现了，想用PC Suite的Nokia Music看看，竟然装不上…..
+额…不管Music Manager了，原来把存储卡里乱码的目录删了就能正常刷新…搞定哈哈
+        </p>
+    </div>
+</a>
+
 		
 			<a href="https://ivylee.github.io/post/265/" class="catalogue-item">
     <div>
@@ -201,27 +220,6 @@ Last edited by sychopx on August 10, 2009 at 11:52 pm
 </a>
 
 		
-			<a href="https://ivylee.github.io/post/live-android/" class="catalogue-item">
-    <div>
-        <time datetime="2009-07-22 00:00:00 &#43;0000 UTC" class="catalogue-time">July 22, 2009</time>
-        <h1 class="catalogue-title">Live-Android</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-            July.7th
-今天发现了 live-android(a LiveCD for Android running on x86 platforms.) ，下载了 iso ，用 Virtualbox mount&amp;boot ，可爱的 android 出现了 …
-LiveAndroid HOWTO
-liveandroid v0.2 1. Download liveandroidv0.2.iso.001 / liveandroidv0.2.iso.002 ,
-use HJSplit(http://www.freebyte.com/hjsplit/ or http://www.freebytesoftware.com/download/hjsplit.zip) join it. 我用的是 lxsplit
-2. Check md5sum via http://www.pc-tools.net/win32/md5sums/ or http://www.pc-tools.net/files/win32/freeware/md5sums-1.2.zip liveandroidv0.2.iso MD5: 03852bce8cb26aba21d147153c1fb120
-skip掉…
-3. use liveandroidv0.2.iso in vmware or virtualbox to your taste. of cource, you can burn it as a LiveCD.
-4. boot and enjoy!
-        </p>
-    </div>
-</a>
-
-		
 	</div>
 
 	<div class="pagination">
@@ -239,7 +237,7 @@ skip掉…
 
         		<footer>
 			<span>
-			&copy; <time datetime="2019-11-04 14:10:27.680757 -0500 EST m=&#43;0.225920232">2019</time> Ivy Lee.
+			&copy; <time datetime="2019-12-06 12:04:49.315252 -0500 EST m=&#43;0.420782011">2019</time> Ivy Lee.
 			</span>
 		</footer>
 

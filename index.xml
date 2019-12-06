@@ -16,9 +16,16 @@
       <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://ivylee.github.io/post/vim-theme-for-the-beach/</guid>
-      <description>TLDR: Use shirotelin color theme for VIM if you work under the sun.
-Working on the beach. Checked!
-I borrowed a beach chair from the hotel I&amp;rsquo;m staying at, and here I am, wearing the big hat I bought from Florence and sun glasses, sitting under the bright sun with occasional shadows thanks to the clouds, the waves keep rolling in front of me while I try to read and type into my editor in the terminal.</description>
+      <description>I recommend shirotelin color theme for VIM if you work under the sun.</description>
+    </item>
+    
+    <item>
+      <title>arXiv Reader</title>
+      <link>https://ivylee.github.io/post/arxiv-reader/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivylee.github.io/post/arxiv-reader/</guid>
+      <description>arXiv Reader is an iOS shortcut for automatically opening an arXiv paper as responsive web page in Safari, built on top of arXiv Vanity.</description>
     </item>
     
     <item>

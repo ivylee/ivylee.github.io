@@ -10,9 +10,6 @@
   		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/fonts.css">
 		
-		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
 		
 		<link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="Bits" />
@@ -35,6 +32,26 @@
 
 <main>
 	<div class="catalogue">
+		
+			<a href="https://ivylee.github.io/post/packetixnet-vpn-client-installation-configuration-on-linux/" class="catalogue-item">
+    <div>
+        <time datetime="2009-10-31 00:00:00 &#43;0000 UTC" class="catalogue-time">October 31, 2009</time>
+        <h1 class="catalogue-title">PacketiX.NET Vpn Client Installation &amp; Configuration on Linux</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            嗯…huntxu又说我无聊乱折腾了…
+为啥突然想起来捣鼓vpn呢？想起来的确很无聊，只是为了用上twitterfeed post to facebook的功能…之前用gapp/your-freedom/opera mini都没成功，极度不爽，翻过强了竟然还有不能做的事?! 不死心，决定试下vpn。
+以前用过hotspot shield，挺好。可是我在学校用不了校园网的时候，白痴地把机器抱去网络中心，光头老师发现了我的虚拟网卡，卸掉了hotspot shield…我后悔去了。在学校，上网有问题，一定不能找网络中心的人。
+so I googled and found this japenese vpn . one of the important feature of PacketiX.NET vpn is that it supports ssl, and it doesn’t require registration.
+在win7下安装顺利+使用顺利+网速比之前用过的翻墙工具快+成功设置了twitterfeed… 因此想试试在linux下配置。
+so I googled again and found this recent post from which I stoled the title, sorry about that. 官方manual 也有说到如何在linux下安装，可配置没讲清楚(我没看明白)…
+参考了以上文章，下面列出安装与配置该client的具体步骤(很具体):
+ when using ur default connection, mark down/memorize ur dns server(cat /etc/resolv.
+        </p>
+    </div>
+</a>
+
 		
 			<a href="https://ivylee.github.io/post/together-run-together-fun/" class="catalogue-item">
     <div>
@@ -183,28 +200,6 @@ gapp的https有点问题于是搁置了，迎来了很好用的your-freedom，�
 </a>
 
 		
-			<a href="https://ivylee.github.io/post/nokia-n78-firmware-update-virtualbox/" class="catalogue-item">
-    <div>
-        <time datetime="2009-09-01 00:00:00 &#43;0000 UTC" class="catalogue-time">September 1, 2009</time>
-        <h1 class="catalogue-title">Nokia N78 在 VirtualBox 下成功刷机</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-            艰难啊！
-上一次刷机大约是2月份左右，本想刷出FM，未果，只修正了music library的刷新问题。
-这次本想在vista下刷，Nokia PC Suite 和NSS都安装好了，用NSS scan的时候总是error，可能是上次刷机未果的后遗症(后来发现NSS不支持FP2的机型)。不爽之下决定在VirtualBox的xp试下。奇怪的usb总是用不了，害我重装了VirtualBox，总结一下关键在于fstab和新建一个empty filter…
-刷机前先用PC Suite backup，刷机过程参考了：
-凤凰刷机2009教程
-诺基亚刷机_凤凰刷机工具2008详细教程
-用的Firmware是
-N78 RM-235 APAC 30.011 V7.0
-刷机成功，出现FM transmitter 的菜单，可是music library 的刷新问题又出现了，想用PC Suite的Nokia Music看看，竟然装不上…..
-额…不管Music Manager了，原来把存储卡里乱码的目录删了就能正常刷新…搞定哈哈
-        </p>
-    </div>
-</a>
-
-		
 	</div>
 	
 	<div class="pagination">
@@ -222,7 +217,7 @@ N78 RM-235 APAC 30.011 V7.0
 
         		<footer>
 			<span>
-			&copy; <time datetime="2019-11-04 14:10:27.67469 -0500 EST m=&#43;0.219853150">2019</time> Ivy Lee.
+			&copy; <time datetime="2019-12-06 12:04:49.293253 -0500 EST m=&#43;0.398782994">2019</time> Ivy Lee.
 			</span>
 		</footer>
 
