@@ -12,4 +12,4 @@ seo:
 isFeatured: true
 ---
 
-[AirExif](https://rapidapi.com/studio-xolo-studio-xolo-api/api/airexif2) is a cloud API that [integrates](https://medium.com/airexif/how-to-automatically-extract-exif-metadata-from-photos-in-airtable-without-code-5ce44b62bee4) with Zapier and Airtable for effortless management of photo metadata.
+[AirExif](https://www.airexif.com/) is a cloud API that [integrates](https://www.airexif.com/how-to-automatically-extract-exif-metadata-from-photos-in-airtable-without-code/) with Zapier and Airtable for effortless management of photo metadata.
