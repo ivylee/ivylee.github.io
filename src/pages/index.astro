@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import Hero from '../components/Hero.astro';
+import PostPreview from '../components/PostPreview.astro';
+import ProjectPreview from '../components/ProjectPreview.astro';
+import Testimonials from '../components/Testimonials.astro';
+import siteConfig from '../data/site-config';
+import { sortItemsByDateDesc } from '../utils/data-utils';
+
+const posts = (await getCollection('blog')).sort(sortItemsByDateDesc).slice(0, 3);
+
+const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
+const featuredProjects = projects.filter(({ data }) => data.isFeatured);
+---
+
+<BaseLayout description={siteConfig.description} image={siteConfig.image}>
+    {
+        featuredProjects?.length > 0 && (
+            <div class="mb-16 sm:mb-24">
+                <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Projects</h2>
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  {featuredProjects.map((project) => (
+                      <ProjectPreview project={project} class="mb-10 sm:mb-12" headingLevel="h3" />
+                  ))}
+                </div>
+                <div>
+                    <Button href="/projects">View All Projects</Button>
+                </div>
+            </div>
+        )
+    }
+    <div class="mb-16 sm:mb-24">
+        <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Press Coverage</h2>
+        <div class="grid grid-cols-3 gap-4 bg-white">
+          <div class="content-center">
+            <a href="https://venturebeat.com/2016/07/19/shutterstock-contributor-keywords/">
+              <img src="/800px-VentureBeat_VB_Logo.png" alt="VentureBeat logo">
+            </a>
+          </div>
+          <div class="content-center">
+            <a href="https://techcrunch.com/2018/11/28/phiar-nabs-3-million-for-an-ar-navigation-app-for-drivers/">
+              <img src="/techcrunch-logo-1.png" alt="Techcrunch logo">
+            </a>
+          </div>
+          <div class="content-center">
+            <a href="https://www.newsweek.com/phiar-ar-app-gives-better-directions-while-driving-google-maps-1235092">
+              <img src="/Newsweek_Logo.svg.png" alt="Newsweek logo">
+            </a>
+          </div>
+        </div>
+    </div>
+    <Testimonials />
+    <div class="mb-16 sm:mb-24">
+      <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Contact</h2>
+      <p>Looking for advice to grow your business or career? Schedule a <a href="https://cal.com/studioxolo/intro" target="_blank"><strong>free 30-minute intro call</strong></a>, let's chat!</p>
+      <p>Want to work with me on a new project? <a href="https://airtable.com/shruF2zNx0AvJ6FEX" target="_blank"><strong>Tell me more</strong></a> about it and I'll get back to you.</p>
+    </div>
+    {
+        posts?.length > 0 && (
+            <div class="mb-16 sm:mb-24">
+                <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Latest Updates</h2>
+                {posts.map((post) => (
+                    <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
+                ))}
+                <div class="mt-12 sm:mt-16">
+                    <Button href="/blog">View All Posts</Button>
+                </div>
+            </div>
+        )
+    }
+</BaseLayout>

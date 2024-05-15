@@ -1,0 +1,78 @@
+---
+const testimonialsData = [
+  {
+    author: "Moiz Malik",
+    title: "CEO of Nooklyn",
+    quote: "Can't ask for a better engineer to augment your team/initiatives.",
+    logo: "/nooklyn_com_logo.jpg"
+  },
+  {
+    author: "David Parkes",
+    title: "Professor at Harvard University",
+    quote: "Working with Ivy has been great! She has great experience bridging research and industry, great attention to detail, and has been a pleasure to work with.",
+    logo: "/harvard_logo.jpg"
+  },
+  {
+    author: "Manmit Shrimali",
+    title: "Co-founder & CEO of Turing Labs",
+    quote: "Look no further if you are looking for exceptional ML engineering and a person who you would love to work with.",
+    logo: "/turingsaas.jpg"
+  },
+  {
+    author: "Ikhwan Rivai",
+    title: "Documentary Producer",
+    quote: "I'm very happy with everything and it's really exciting seeing how Ivy built it. I would definitely recommend Ivy to anyone. It was a great experience and I hope to continue to evolve the app over time.",
+    logo: "/ikhwan_rivai_01.avif"
+  },
+  {
+    author: "Ankur Ankan, PhD",
+    title: "ML Research Engineer at Turing Labs",
+    quote: "I had a fantastic time working with Ivy at Turing Labs. She was the first Machine Learning (ML) engineer and created our ML platform from the ground up. Ivy is exceptional at translating the latest ML research into practical, production-grade code. Coming from an academic ML background, Ivy was also a great mentor, helping me navigate the web app development side. Ivy's blend of advanced ML expertise and practical application skills is remarkable.",
+    logo: "/ankur.jpg"
+  },
+  {
+    author: "Adam Houck",
+    title: "Lead Softwre Engineer",
+    quote: "Working with Ivy was an enlightening experience. Her extensive knowledge and expertise in our field were not only impressive but also instrumental in navigating complex challenges. Ivy's unique approach to problem-solving and her commitment to excellence made our collaboration both productive and inspiring. Her intelligence and dedication are remarkable, and they significantly contribute to the success of any project. It was a pleasure to work alongside such a knowledgeable and skilled professional.",
+    logo: "/adam.jpg"
+  },
+  {
+    author: "Gloria Scott",
+    title: "Senior Product Manager",
+    quote: "Ivy is a talented professional and a great leader! She has an unparalleled ability to raise excellent questions that support prioritization of efforts, use case understanding, and refinement of requirements. She is attentive to details and holds herself and her teammates to high but attainable standards of quality and thoughtfulness. I really enjoyed my time working with Ivy! She brings a clear-headed approach to problem solving, and offers a solutions-focused and action-oriented personality that elevates team efficiency and productivity!",
+    logo: "/gloria.jpg"
+  },
+  {
+    author: "Paul Siegel, PhD",
+    title: "Senior Machine Learning Engineer",
+    quote: "Ivy is one of the best engineering leaders that I've ever worked with. As a leader, she had a good understanding of the company's business / product goals, and she had a clear vision for how to improve the technology over the long term in order to meet them. The company's ML stack relies heavily on techniques like expert knowledge and Bayesian optimization in order to compensate for the sparsity of data available in our problem space, and Ivy's strategy emphasized the need for more / better approaches to validation so that we could more confidently improve our algorithms over time. This is my litmus test for a strong ML leader: instead of blindly chasing the latest AI fad, improve your ability to vet new models or techniques against your business goals.",
+    logo: "/paul.jpg"
+  },
+];
+
+---
+
+<div class="mb-16 sm:mb-24">
+  <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Testimonials</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {testimonialsData.map((data) => (
+    <div class="rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300 mt-4 mb-2 xl:mt-8 xl:mb-4 flex flex-col justify-between bg-muted">
+      <div class="flex flex-col">
+        <div class="flex justify-center">
+          <img src={data.logo} class="h-24 w-24 mb-4 rounded-full"/>
+        </div>
+        <p>{data.quote}</p>
+      </div>
+      <div class="flex flex-col mt-4 text-right">
+        <div class="font-medium">
+          {data.author}
+        </div>
+        <div>
+          {data.title}
+        </div>
+      </div>
+    </div>
+  </div>
+))}
+</div>
+</div>

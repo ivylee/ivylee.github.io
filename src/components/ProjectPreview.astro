@@ -1,0 +1,24 @@
+---
+import { type CollectionEntry } from 'astro:content';
+import ArrowRight from '../icons/ArrowRight.astro';
+import { Image } from 'astro:assets';
+
+type Props = { project: CollectionEntry<'projects'>; class?: string; headingLevel?: 'h2' | 'h3' };
+
+const { project, class: className, headingLevel = 'h3' } = Astro.props;
+const { title, description } = project.data;
+const TitleTag = headingLevel;
+---
+
+<a class={className} href={`/projects/${project.slug}`}>
+  <div class="rounded-lg bg-card text-card-foreground transfor-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start overflow-hidden shadow-lg transition duration-75 ease-in-out cursor-pointer hover:scale-105">
+    <img src={project.data.seo.image.src} alt={`${title} project cover image`} class="h-64 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover">
+  </div>
+    <div class="gap-y-0.5 px-5 py-4 text-center">
+        <TitleTag
+            class="text-lg leading-tight font-serif font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1 sm:text-lg"
+        >
+            {title}
+        </TitleTag>
+    </div>
+</a>
