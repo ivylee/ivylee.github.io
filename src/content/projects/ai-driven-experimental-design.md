@@ -12,6 +12,7 @@ seo:
     alt: AI-driven Experimental Design
 isFeatured: true
 ---
+![Flow chart](/aidesign-flow.png)
 
 In conventional product development, humans use the data output from one experiment to inform the design of subsequent
 experiments. This becomes increasingly ineffective as the amount of data output rises exponentially through accelerated
