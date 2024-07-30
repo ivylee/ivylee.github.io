@@ -13,5 +13,11 @@ export default defineConfig({
         tailwind({
             applyBaseStyles: false
         })
-    ]
+    ],
+    markdown: {
+        shikiConfig: {
+            theme: 'dracula',
+            wrap: true
+        }
+    }
 });

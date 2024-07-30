@@ -68,6 +68,17 @@ module.exports = {
                                 fontSize: '1.66667em',
                                 lineHeight: 1.3
                             }
+                        },
+                        'code::before': {
+                            content: 'none'
+                        },
+                        'code::after': {
+                            content: 'none'
+                        },
+                        code: {
+                            fontFamily: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+                            backgroundColor: "rgba(255,255,255,0.1)",
+                            opacity: 0.8,
                         }
                     }
                 },
