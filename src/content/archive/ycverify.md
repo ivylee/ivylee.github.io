@@ -9,7 +9,6 @@ seo:
   image:
     src: '/ycverify.png'
     alt: YCVerify logo 
-isFeatured: true
 ---
 ![YCVerify website screenshot](/ycverify-website.png)
 

@@ -10,7 +10,6 @@ seo:
   image:
     src: '/signals-talk-icon.png'
     alt: Signals Talk logo 
-isFeatured: true
 ---
 ![Signals Talk website screenshot](/signals-talk-screenshot.png)
 
