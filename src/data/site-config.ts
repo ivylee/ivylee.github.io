@@ -38,12 +38,12 @@ export type SiteConfig = {
 };
 
 const siteConfig: SiteConfig = {
-    title: 'Ivy Lee',
+    title: 'Ivy\'s portfolio',
     subtitle: 'Portfolio & Blog',
     description: 'Ivy\'s projects and writings',
     image: {
         src: '/preview.png',
-        alt: 'Ivy Lee\'s portfolio and blog website screenshot'
+        alt: 'Ivy\'s portfolio and blog website screenshot'
     },
     headerNavLinks: [
         {
@@ -57,6 +57,10 @@ const siteConfig: SiteConfig = {
         {
             text: 'Blog',
             href: '/blog'
+        },
+        {
+            text: 'About',
+            href: '/about'
         },
         {
             text: 'Resume',
@@ -76,11 +80,7 @@ const siteConfig: SiteConfig = {
         },
         {
             text: 'LinkedIn',
-            href: 'https://linkedin.com/in/ivyleexy'
-        },
-        {
-            text: 'X/Twitter',
-            href: 'https://twitter.com/1vy1ee'
+            href: 'https://linkedin.com/in/ivyxli'
         }
     ],
     postsPerPage: 10,
