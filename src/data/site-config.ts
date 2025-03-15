@@ -61,10 +61,6 @@ const siteConfig: SiteConfig = {
         {
             text: 'About',
             href: '/about'
-        },
-        {
-            text: 'Resume',
-            href: '/resume.pdf'
         }
     ],
     footerNavLinks: [
