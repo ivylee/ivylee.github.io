@@ -38,17 +38,21 @@ export type SiteConfig = {
 };
 
 const siteConfig: SiteConfig = {
-    title: 'Ivy\'s portfolio',
-    subtitle: 'Portfolio & Blog',
-    description: 'Ivy\'s projects and writings',
+    title: 'Ivy Li\'s Website',
+    subtitle: 'Technical leadership for AI and Machine Learning',
+    description: 'Ivy helps companies build AI-driven products that customers love.',
     image: {
         src: '/preview.png',
-        alt: 'Ivy\'s portfolio and blog website screenshot'
+        alt: 'Ivy Li\'s website screenshot'
     },
     headerNavLinks: [
         {
             text: 'Home',
             href: '/'
+        },
+        {
+            text: 'Coaching',
+            href: '/coaching'
         },
         {
             text: 'Projects',
@@ -67,16 +71,16 @@ const siteConfig: SiteConfig = {
     ],
     socialLinks: [
         {
-            text: 'RSS',
-            href: '/rss.xml'
+            text: 'LinkedIn',
+            href: 'https://linkedin.com/in/ivyxli'
         },
         {
             text: 'GitHub',
             href: 'https://github.com/ivylee'
         },
         {
-            text: 'LinkedIn',
-            href: 'https://linkedin.com/in/ivyxli'
+            text: 'RSS',
+            href: '/rss.xml'
         }
     ],
     postsPerPage: 10,
