@@ -50,10 +50,11 @@ const siteConfig: SiteConfig = {
             text: 'Home',
             href: '/'
         },
-        {
-            text: 'Coaching',
-            href: '/coaching'
-        },
+        // TODO
+        // {
+        //     text: 'Coaching',
+        //     href: '/coaching'
+        // },
         {
             text: 'Projects',
             href: '/projects'
