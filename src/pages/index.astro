@@ -1,38 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/Button.astro';
-import Hero from '../components/Hero.astro';
-import PostPreview from '../components/PostPreview.astro';
-import ProjectPreview from '../components/ProjectPreview.astro';
+import TrustedBy from '../components/TrustedBy.astro';
 import Testimonials from '../components/Testimonials.astro';
 import siteConfig from '../data/site-config';
-import { sortItemsByDateDesc } from '../utils/data-utils';
+import Button from "../components/Button.astro";
 
-const posts = (await getCollection('blog')).sort(sortItemsByDateDesc).slice(0, 3);
-
-const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
-const featuredProjects = projects.filter(({ data }) => data.isFeatured);
 ---
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
-    {
-        featuredProjects?.length > 0 && (
-            <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Projects</h2>
-                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  {featuredProjects.map((project) => (
-                      <ProjectPreview project={project} class="mb-10 sm:mb-12" headingLevel="h3" />
-                  ))}
-                </div>
-                <div>
-                    <Button href="/projects">View All Projects</Button>
-                </div>
-            </div>
-        )
-    }
+    <TrustedBy />
     <div class="mb-16 sm:mb-24">
-        <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Press Coverage</h2>
+        <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">As Featured In</h2>
         <div class="grid grid-cols-3 gap-4 bg-white">
           <div class="content-center">
             <a href="https://venturebeat.com/2016/07/19/shutterstock-contributor-keywords/">
@@ -52,21 +30,9 @@ const featuredProjects = projects.filter(({ data }) => data.isFeatured);
         </div>
     </div>
     <Testimonials />
-    <div class="mb-16 sm:mb-24">
+    <div class="mb-16 sm:mb-24 text-center">
       <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Contact</h2>
-      <p>Want to work with me on a new project? <a href="https://airtable.com/shruF2zNx0AvJ6FEX" target="_blank"><strong>Tell me more</strong></a> about it and I'll get back to you.</p>
+      <p class="mb-4">What does success look like for your business?</p>
+      <Button href="https://airtable.com/shruF2zNx0AvJ6FEX" target="_blank">Let's talk!</Button>
     </div>
-    {
-        posts?.length > 0 && (
-            <div class="mb-16 sm:mb-24">
-                <h2 class="mb-12 text-xl font-serif font-medium sm:mb-16 sm:text-2xl text-center">Latest Updates</h2>
-                {posts.map((post) => (
-                    <PostPreview post={post} class="mb-10 sm:mb-12" headingLevel="h3" />
-                ))}
-                <div class="mt-12 sm:mt-16">
-                    <Button href="/blog">View All Posts</Button>
-                </div>
-            </div>
-        )
-    }
 </BaseLayout>
