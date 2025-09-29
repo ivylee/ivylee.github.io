@@ -1,0 +1,26 @@
+---
+const logos = [
+  {src: '/y_combinator.svg', alt: 'Y Combinator' },
+  {src: '/Harvard_University_logo.svg', alt: 'Harvard University' },
+  {src: '/shutterstock_logo.png', alt: 'Shutterstock' },
+  {src: '/whatnot.svg', alt: 'Whatnot' },
+  {src: '/socure_logo.svg', alt: 'Socure' },
+  {src: '/nooklyn_com_logo.png', alt: 'Nooklyn' },
+  {src: '/turingsaas.png', alt: 'Turing Labs' },
+  {src: '/koko.png', alt: 'Koko' },
+];
+---
+
+<div class="mb-16 sm:mb-24">
+  <div class="grid grid-cols-4 items-center justify-center gap-2 p-2 bg-white">
+    {logos.map((item) => (
+      <div class="flex items-center justify-center">
+        <img
+          src={item.src}
+          alt={item.alt}
+          class="h-6 w-auto"
+        />
+      </div>
+    ))}
+  </div>
+</div>
