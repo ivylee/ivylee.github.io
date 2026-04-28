@@ -8,14 +8,14 @@ export async function GET(context) {
     const blogItems = posts.map((item) => ({
         title: item.data.title,
         description: item.data.excerpt,
-        link: `/blog/${item.slug}/`,
+        link: `/blog/${item.id}/`,
         pubDate: item.data.publishDate.setUTCHours(0)
     }));
     const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
     const projectItems = projects.map((item) => ({
         title: item.data.title,
         description: item.data.description,
-        link: `/projects/${item.slug}/`,
+        link: `/projects/${item.id}/`,
         pubDate: item.data.publishDate.setUTCHours(0)
     }));
     return rss({

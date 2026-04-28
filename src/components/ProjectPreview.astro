@@ -10,7 +10,7 @@ const { title, description } = project.data;
 const TitleTag = headingLevel;
 ---
 
-<a class={className} href={`/projects/${project.slug}`}>
+<a class={className} href={`/projects/${project.id}`}>
   <div class="rounded-lg bg-card text-card-foreground transfor-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start overflow-hidden shadow-lg transition duration-75 ease-in-out cursor-pointer hover:scale-105">
     <img src={project.data.seo.image.src} alt={`${title} project cover image`} class="h-64 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover">
   </div>
