@@ -17,9 +17,20 @@ type Props = { page: CollectionEntry<'pages'> };
 const { page } = Astro.props;
 const { title, seo } = page.data;
 const { Content } = await render(page);
+const schemaKind = page.id === 'about' ? 'profile' : 'webpage';
 ---
 
-<BaseLayout title={seo?.title ?? title} description={seo?.description} image={seo?.image} showHeader={false}>
+<BaseLayout
+    title={seo?.title ?? title}
+    description={seo?.description}
+    image={seo?.image}
+    schemaKind={schemaKind}
+    breadcrumbs={[
+        { name: 'Home', url: '/' },
+        { name: title, url: `/${page.id}/` }
+    ]}
+    showHeader={false}
+>
     <article class="mb-16 sm:mb-24">
         <header class="mb-8">
             <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{title}</h1>

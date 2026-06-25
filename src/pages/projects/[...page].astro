@@ -22,6 +22,11 @@ const portfolio = page.data;
     title="Portfolio"
     description="Explore a diverse portfolio showcasing my passion and expertise"
     image={{ src: '/preview.png', alt: 'The preview of the site' }}
+    schemaKind="collection"
+    breadcrumbs={[
+        { name: 'Home', url: '/' },
+        { name: 'Projects', url: '/projects/' }
+    ]}
     showHeader={false}
 >
     <h1 class="mb-12 text-2xl leading-tight font-serif sm:mb-16 sm:text-4xl">Projects</h1>

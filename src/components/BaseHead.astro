@@ -1,5 +1,8 @@
 ---
+import { Schema } from 'astro-seo-schema';
+import { Seo } from 'astro-seo-meta';
 import siteConfig from '../data/site-config';
+import { buildSeoGraph } from '../utils/seo-schema';
 import '../styles/global.css';
 
 export type Props = {
@@ -7,9 +10,25 @@ export type Props = {
     description?: string;
     image?: { src: string; alt?: string };
     pageType?: 'website' | 'article';
+    schemaKind?: 'webpage' | 'profile' | 'collection' | 'blog' | 'blogPost' | 'project';
+    publishedDate?: Date | string;
+    updatedDate?: Date | string;
+    tags?: string[];
+    breadcrumbs?: { name: string; url: string }[];
+    projectUrl?: string;
 };
 
-const { description = '', image = siteConfig.image, pageType = 'website' } = Astro.props;
+const {
+    description = siteConfig.description,
+    image = siteConfig.image,
+    pageType = 'website',
+    schemaKind = 'webpage',
+    publishedDate,
+    updatedDate,
+    tags,
+    breadcrumbs,
+    projectUrl
+} = Astro.props;
 const title = [Astro.props.title, siteConfig.title].filter(Boolean).join(' | ');
 const resolvedImage = image?.src
     ? {
@@ -32,12 +51,25 @@ function formatCanonicalURL(url: string | URL) {
     // otherwise, canonical URL always has a trailing slash
     return path.replace(/\/?$/, hasQueryParams ? '' : '/');
 }
+
+const canonicalHref = formatCanonicalURL(canonicalURL);
+const seoGraph = buildSeoGraph({
+    canonicalUrl: canonicalHref,
+    title,
+    description,
+    image,
+    kind: schemaKind,
+    publishedDate,
+    updatedDate,
+    tags,
+    breadcrumbs,
+    projectUrl
+});
 ---
 
 <!-- High Priority Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>{title}</title>
 <meta name="generator" content={Astro.generator} />
 
 <!-- Fonts -->
@@ -49,29 +81,29 @@ function formatCanonicalURL(url: string | URL) {
 />
 
 <!-- Low Priority Global Metadata -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
 
 <!-- Page Metadata -->
-<link rel="canonical" href={formatCanonicalURL(canonicalURL)} />
-<meta name="description" content={description} />
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content={pageType} />
-<meta property="og:url" content={formatCanonicalURL(canonicalURL)} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-{resolvedImage?.src && <meta property="og:image" content={resolvedImage.src} />}
+<link rel="canonical" href={canonicalHref} />
+<Seo
+    title={title}
+    description={description}
+    icon="/favicon.svg"
+    facebook={{
+        image: resolvedImage?.src,
+        url: canonicalHref,
+        type: pageType
+    }}
+    twitter={{
+        image: resolvedImage?.src,
+        card: 'summary_large_image'
+    }}
+/>
 {resolvedImage?.alt && <meta property="og:image:alt" content={resolvedImage.alt} />}
-
-<!-- X/Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={formatCanonicalURL(canonicalURL)} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-{resolvedImage?.src && <meta property="twitter:image" content={resolvedImage.src} />}
+<meta property="twitter:url" content={canonicalHref} />
 {resolvedImage?.alt && <meta name="twitter:image:alt" content={resolvedImage?.alt} />}
+<Schema item={seoGraph} />
 
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b795a838b6b34046b85a949ecb2e3e6a"}'></script>

@@ -38,6 +38,12 @@ const currentTag = allTags.find((tag) => {
     title={`Posts and Projects Tagged ${currentTag?.name}`}
     description={`Explore a curated collection of blog posts and projects under ${currentTag?.name}`}
     image={{ src: '/preview.png', alt: 'The preview of the site' }}
+    schemaKind="collection"
+    breadcrumbs={[
+        { name: 'Home', url: '/' },
+        { name: 'Tags', url: '/tags/' },
+        { name: currentTag?.name ?? 'Tag', url: `/tags/${params.slug}/` }
+    ]}
     showHeader={false}
 >
     <h1 class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-4xl">Posts and Projects Tagged "{currentTag?.name}"</h1>
